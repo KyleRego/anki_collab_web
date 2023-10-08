@@ -961,7 +961,7 @@ async fn main() {
     
     let figment = rocket::Config::figment()
         .merge(("port", 1337))
-        .merge(("secret_key", "RETRACTED"))
+        // .merge(("secret_key", "RETRACTED"))
         .merge(("limits", Limits::new().limit("json", 10.mebibytes())));
 
     if let Err(err) = rocket::custom(figment)
